@@ -1,0 +1,70 @@
+/* Fondo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("fondo4.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Centrar contenido */
+.contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align items to the left */
+}
+
+/* Cuadro estilo pixel */
+.cuadro-texto {
+    width: 40%; /* Reduced from 60% */
+    background-color: rgba(10, 10, 25, 0.75);
+    border: 4px solid #ffffff;
+    padding: 20px; /* Reduced from 30px */
+    margin: 20px; /* Add some spacing from the edges */
+    box-shadow:
+        0 0 0 4px #000,
+        6px 6px 0 #000;
+}
+
+/* Texto */
+#texto {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.8em;
+    min-height: 120px;
+}
+
+/* Botón */
+.boton-siguiente {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 20px; /* Align to the right with some margin */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    padding: 15px 25px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    border: 3px solid white;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 3px #000,
+        5px 5px 0 #000;
+
+    transition: transform 0.1s;
+}
+
+/* Efecto pixel al presionar */
+.boton-siguiente:active {
+    transform: translate(4px,4px);
+    box-shadow:
+        0 0 0 3px #000,
+        1px 1px 0 #000;
+}

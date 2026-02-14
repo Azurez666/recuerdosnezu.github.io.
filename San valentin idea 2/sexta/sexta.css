@@ -1,0 +1,65 @@
+body, html{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family:'Press Start 2P', cursive;
+    overflow:hidden;
+}
+
+/* Fondo GIF */
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url("fondo.gif") center/cover no-repeat;
+    z-index:-1;
+}
+
+/* Caja pixel */
+.dialog{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:60%;
+    background:rgba(0,0,0,0.7);
+    border:4px solid white;
+    padding:25px;
+    color:white;
+    text-align:center;
+    line-height:1.6;
+}
+
+/* Botones */
+.next, .ask, .final{
+    position:absolute;
+    font-family:'Press Start 2P', cursive;
+    background:black;
+    color:white;
+    border:3px solid white;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.next{ bottom:-60px; right:20px; }
+
+.ask{
+    bottom:40px;
+    right:40px;
+}
+
+.final{
+    bottom:40px;
+    right:40px;
+    text-decoration:none;
+}
+
+.hidden{ display:none; }
+
+.fade{
+    animation:fadeOut 2s forwards;
+}
+
+@keyframes fadeOut{
+    to{ opacity:0; }
+}

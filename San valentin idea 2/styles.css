@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    height: 100vh;
+    overflow: hidden;
+    background: url('fondo.jpg') no-repeat center center / cover;
+    position: relative;
+}
+
+/* ================= TÍTULO ================= */
+
+.titulo-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.titulo {
+    font-size: 36px;
+    color: #0b1f3a;
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 
+        3px 3px 0 #bebebec7,
+        5px 5px 0 #000000;
+}
+
+/* ================= CAJA PIXEL ================= */
+
+.cuadro-pixel {
+    background: #f0f0f0;
+    border: 5px solid #000000;
+    padding: 40px;
+    width: 420px;
+    margin-left: 40px;
+    margin-top: 90px;
+    box-shadow: 6px 6px 0 #525252;
+    position: relative;
+    z-index: 3;
+}
+
+.cuadro-pixel p {
+    font-size: 16px;
+    line-height: 2;
+    color: #000;
+}
+
+/* ================= BOTÓN ================= */
+
+.boton {
+    position: absolute;
+    bottom: 90px;
+    right: 100px;
+    z-index: 3;
+}
+
+.boton button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    padding: 26px 42px;
+    background: #e6e6e6;
+    border: 4px solid #000000;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #444444;
+}
+
+.boton button:hover {
+    background: #07000000;
+}
+
+/* ================= NUBES ================= */
+
+.cloud {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    animation: moveCloud linear infinite;
+    z-index: 2;
+}
+
+/* Nubes altas */
+.cloud1 {
+    width: 250px;
+    height: 100px;
+    background-image: url('nube1.png');
+    top: 18%;
+    left: -200px;
+    animation-duration: 55s;
+}
+
+.cloud2 {
+    width: 200px;
+    height: 250px;
+    background-image: url('nube2.png');
+    top: 12%;
+    left: -300px;
+    animation-duration: 70s;
+}
+
+/* Nubes bajas */
+.cloud3 {
+    width: 200px;
+    height: 250px;
+    background-image: url('nube3.png');
+    top: 35%;
+    left: -180px;
+    animation-duration: 50s;
+}
+
+.cloud4 {
+    width: 150px;
+    height: 250px;
+    background-image: url('nube2.png');
+    top: 40%;
+    left: -250px;
+    animation-duration: 65s;
+}
+
+@keyframes moveCloud {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 100%;
+    }
+}
